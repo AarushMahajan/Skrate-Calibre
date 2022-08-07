@@ -8,6 +8,10 @@ router.get('/tickets', auth.authenticateUser, ticket.getTickets);
 router.post('/tickets/new', auth.authenticateUser, ticket.createTicket);
 router.post('/tickets/markAsClosed', auth.authenticateUser, ticket.closeTicket);
 router.post('/tickets/delete', auth.authenticateUser, ticket.deleteTicket);
+router.get('/', (req, res, next) => {
+    res.send('Hello World !!!!');
+});
+
 
 
 module.exports = router
